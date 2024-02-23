@@ -6,6 +6,8 @@ import Services from './Services';
 import Hero from './Hero';
 import Button from './Button';
 import Input from './Input';
+import Card from './Card';
+import Footer from './Footer';
 
 export {
 About,
@@ -16,4 +18,6 @@ Services,
 Hero,
 Button,
 Input,
+Card,
+Footer
 }
