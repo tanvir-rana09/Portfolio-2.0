@@ -1,41 +1,3 @@
-// 'use client'
-// import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
-// import { ReactNode, useEffect } from 'react';
-
-// interface CounterProps {
-//     value: number; // Making value prop required
-//     icon: ReactNode;
-//     name?: string; // Marking name prop as optional
-// }
-
-// const Counter = ({
-//     value,
-//     icon,
-//     name,
-// }: CounterProps) => {
-//   const count = useMotionValue(0);
-//   const rounded = useTransform(count, Math.round);
-
-//     useEffect(() => {
-//         const animation = animate(count, value, { duration: 10 })
-//         return animation.stop;
-
-//     }, [value]);
-
-//     return (
-//         <motion.div className='text-xl text-white'>
-//             <div>{icon}</div>
-//             <div>
-//                 <span>{rounded}</span>
-//                 {name && <p>{name}</p>} 
-//             </div>
-//         </motion.div>
-//     );
-// };
-
-// export default Counter;
-
-
 'use client'
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { ReactNode, useEffect } from "react";
@@ -56,7 +18,7 @@ export default function Counter({
 		const animation = animate(count, value, { duration: 10 });
 
 		return animation.stop;
-	}, []);
+	}, [count,value]);
 
 	return (
 		<div className='text-xl text-gray-300 flex items-center gap-2 '>

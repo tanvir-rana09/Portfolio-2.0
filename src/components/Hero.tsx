@@ -28,7 +28,7 @@ export default function Hero() {
             Hi There, I am <br /> Tanvir Rana
           </h1>
           <p className="mt-4 font-normal text-base text-neutral-300 max-w-xl text-center mx-auto">
-            A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product.I'm passionate about crafting experiences that are engaging, accessible, and user-centric.
+            A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product.I&apos;m passionate about crafting experiences that are engaging, accessible, and user-centric.
           </p>
         </div>
       </div>
