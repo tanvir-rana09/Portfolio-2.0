@@ -103,8 +103,8 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="md:px-12 max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-      <h1 className="text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 font-secular">
+    <div className="md:px-12 max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-20 z-10">
+      <h1 className="text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 font-secular uppercase">
         My Projects
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 text-neutral-200">
@@ -139,7 +139,7 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product md:h-96 rounded-md md:w-[40rem] h-44 w-[20rem] relative flex-shrink-0"
+      className="group/product lg:h-96 lg:w-[45rem] md:h-72 rounded-md md:w-[30rem] h-44 w-[20rem] relative flex-shrink-0"
     >
       <div
 
@@ -157,7 +157,7 @@ export const ProductCard = ({
         </div>
       </div>
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-50 duration-300 bg-black pointer-events-none"></div>
-      <h2 className="absolute bottom-0 left-0 w-full h-full flex items-center justify-center opacity-0 group-hover/product:opacity-100 text-white font-caveat text-3xl flex-col gap-2">
+      <h2 className="absolute -bottom-20 left-0 w-full h-full flex items-center justify-center opacity-0 group-hover/product:opacity-100 group-hover/product:bottom-0 duration-500 text-white font-caveat text-3xl flex-col gap-2">
         {product.title}
         <Link href={product.link} className='px-6 py-2 rounded-md text-sm hover:bg-[#000000] duration-500 shadow-md bg-primary text-white font-sen'>Live Site</Link>
       </h2>

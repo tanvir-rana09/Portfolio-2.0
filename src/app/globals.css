@@ -2,20 +2,119 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-	*{
-		@apply text-primary 
-	}
-	html,body{
-		@apply bg-[#000000]
+@layer base {
+
+	html,
+	body {
+		@apply bg-[#000000] overflow-x-hidden
 	}
 }
 
-@layer components{
-	.navbar{
+@layer components {
+	.navbar {
 		@apply text-xl px-3 py-2 relative after:absolute opacity-60 hover:opacity-100 after:left-0 after:top-9 after:m-auto after:w-0 after:h-[1px] after:flex after:items-center after:justify-center after:text-transparent after:bg-primary after:invisible after:opacity-0 hover:after:opacity-100 hover:after:visible hover:after:w-full after:duration-300 hover:after:cursor-pointer hover:after:rounded-full z-50 after:-z-10
 	}
-	.btn{
-		@apply relative after:absolute after:left-0 after:top-0 after:w-0 after:h-full  after:text-transparent after:invisible after:opacity-0 hover:after:opacity-100 hover:after:visible hover:after:w-full after:duration-300 cursor-pointer z-50 after:-z-10 
+
+	.btn {
+		@apply relative after:absolute after:left-0 after:top-0 after:w-0 after:h-full after:text-transparent after:invisible after:opacity-0 hover:after:opacity-100 hover:after:visible hover:after:w-full after:duration-300 cursor-pointer z-50 after:-z-10
 	}
+}
+
+* {
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+}
+
+main {
+	overflow: hidden;
+	
+}
+
+
+::-webkit-scrollbar {
+	width: 10px;
+	background-color: #000000;
+	display: none;
+}
+
+.parallax {
+	overflow: hidden;
+	letter-spacing: -2px;
+	line-height: 0.8;
+	margin: 0;
+	white-space: nowrap;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 64px;
+	display: flex;
+	white-space: nowrap;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.parallax span {
+	display: block;
+	margin-right: 30px;
+}
+
+
+
+.menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 400px;
+	background:#000000;
+	padding-top: 100px;
+	transform: translateX(-100%);
+	will-change: transform;
+}
+
+.animationMenuItems {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 15px;
+}
+
+.animationMenuItem {
+	color: white;
+	display: block;
+	transform-origin: -20px 50%;
+	font-size: 48px;
+	padding: 10px;
+	will-change: transform, opacity, filter;
+}
+
+.animationMenuItems,
+.animationMenuItem {
+	list-style: none;
+	margin: 0;
+}
+
+.toggleBtn {
+	outline: none;
+	border: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	cursor: pointer;
+	position: absolute;
+	top: 18px;
+	left: 15px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: #353535;
+	padding: 10px;
+}
+
+.toggleBtn path {
+	fill: white;
 }

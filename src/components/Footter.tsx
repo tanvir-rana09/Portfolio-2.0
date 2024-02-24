@@ -14,9 +14,9 @@ import { FaHeart } from "react-icons/fa6";
 
 export default function Footer() {
 	return (
-		<div className="h-[40rem] w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased overflow-x-hidden">
+		<div className="h-[40rem] w-full rounded-md bg-[#000000] relative flex flex-col items-center justify-center antialiased overflow-x-hidden">
 			<div className="max-w-2xl mx-auto p-4">
-				<h1 className="relative z-10 text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
+				<h1 className="relative z-10 text-lg md:text-6xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-bold font-secular uppercase">
 					Subscribe For Newsletter
 				</h1>
 				<p></p>
@@ -29,7 +29,7 @@ export default function Footer() {
 						placeholder="@Email"
 						className="rounded-lg border border-neutral-800 focus:ring-2 focus:ring-teal-500 relative z-10 mt-4 px-4 py-3 bg-neutral-950 placeholder:text-neutral-700 w-full"
 					/>
-					<button className="rounded-lg border border-neutral-800 focus:ring-2 focus:ring-teal-500 relative z-10 mt-4 px-5 py-3 bg-neutral-950 text-neutral-300">Subscribe</button>
+					<button className="rounded-lg border border-neutral-800 focus:ring-2  focus:ring-teal-500 relative z-10 mt-4 px-5 py-3 bg-neutral-950 text-neutral-300">Subscribe</button>
 				</div>
 				<div className="flex flex-col gap-10 z-50 mt-20">
 					{/* <div className='flex flex-col items-center z-50'>
@@ -41,29 +41,29 @@ export default function Footer() {
 							<h2 className="font-semibold text-2xl text-neutral-500">Social</h2>
 							<div className='flex gap-5'>
 								<Link
-									className="p-4 border rounded-full hover:bg-white duration-300"
+									className="p-4 border rounded-full hover:text-forth text-gray-200 hover:bg-white duration-300"
 									href='https://facebook.com/tanvir.rana.world'>
 									<FaFacebookF />
 
 								</Link>
 								<Link
-									className="p-4 border rounded-full hover:bg-white duration-300"
+									className="p-4 border rounded-full hover:text-forth text-gray-200 hover:bg-white duration-300"
 									href='https://instagram.com/tanvir.rana.soikat'>
 									<FaInstagram />
 								</Link>
 								<Link
-									className="p-4 border rounded-full hover:bg-white duration-300"
+									className="p-4 border rounded-full hover:text-forth text-gray-200 hover:bg-white duration-300"
 									href='https://x.com/TanvirRana_?t=pXyzY9-y_Urx7SCPc4_rog&s=09'>
 									<FaXTwitter />
 
 								</Link>
 								<Link
-									className="p-4 border rounded-full hover:bg-white duration-300"
+									className="p-4 border rounded-full hover:text-forth text-gray-200 hover:bg-white duration-300"
 									href='#'>
 									<FaLinkedin />
 								</Link>
 								<Link
-									className="p-4 border rounded-full hover:bg-white duration-300"
+									className="p-4 border rounded-full hover:text-forth text-gray-200 hover:bg-white duration-300"
 									href='https://github.com/tanvir-rana09'>
 									<FaGithub />
 								</Link>
@@ -81,7 +81,7 @@ export default function Footer() {
 								<Link
 									className='flex items-center gap-2'
 									href='mailto:tanvir.rana.soikat@gmail.com'>
-									<IoIosMail />
+									<IoIosMail style={{ color: "white" }} />
 									<p className="text-gray-300">tanvir.rana.soikat@gmail.com</p>
 								</Link>
 							</div>
@@ -89,7 +89,7 @@ export default function Footer() {
 					</div>
 				</div>
 			</div>
-			<div className="border-t border-neutral-800 w-screen text-center flex items-center z-50 h-full justify-center lead gap-2 mt-24">
+			<div className="border-t border-neutral-800 w-screen text-center flex items-center z-50 h-full justify-center lead gap-2 mt-24 text-gray-300">
 				&copy; 2024 Made with <FaHeart /> by <Link className="font-semibold text-neutral-400" href='https://facebook.com/tanvir.rana.world'>Tanvir Rana</Link>
 			</div>
 			<BackgroundBeams />

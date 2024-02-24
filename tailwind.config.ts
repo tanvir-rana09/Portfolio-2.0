@@ -32,6 +32,7 @@ const config: Config = {
         caveat: ['var(--font-caveat)'],
         quicksand: ['var(--font-quicksand)'],
         secular: ['var(--font-secular)'],
+        plaster: ['var(--font-plaster)'],
       },
       colors: {
         primary: '#353535',

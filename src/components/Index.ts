@@ -7,7 +7,7 @@ import Hero from './Hero';
 import Button from './Button';
 import Input from './Input';
 import Card from './Card';
-import Footer from './Footer';
+import Footer from './Footter';
 
 export {
 About,

@@ -14,9 +14,9 @@ import img10 from '@/assets/Project (10).png';
 
 export const projects = [
   {
-    title: "Watch E-commerce",
-    link: "https://watch-website-ashy.vercel.app/",
-    thumbnail:img1,
+    title: "Portfolio 0.0",
+    link: "https://portfolio-seven-pearl-23.vercel.app/",
+    thumbnail:img7,
   },
   {
     title: "Movie Database",
@@ -45,9 +45,9 @@ export const projects = [
   },
 
   {
-    title: "Portfolio 0.0",
-    link: "https://portfolio-seven-pearl-23.vercel.app/",
-    thumbnail:img7,
+    title: "Watch E-commerce",
+    link: "https://watch-website-ashy.vercel.app/",
+    thumbnail:img1,
   },
   {
     title: "Cloth Shop",

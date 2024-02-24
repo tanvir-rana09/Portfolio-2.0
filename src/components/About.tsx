@@ -1,38 +1,65 @@
+import Image from 'next/image'
 import React from 'react'
-
+import work1 from '@/assets/pexels-canva-studio-3194519.jpg'
+import work2 from '@/assets/pexels-cottonbro-studio-3205568.jpg'
+import { IoMdDoneAll } from "react-icons/io";
+import Counter from './counter';
+import { FaUser } from "react-icons/fa6";
+import { GrProjects } from "react-icons/gr";
+import { FaCalendarDays } from "react-icons/fa6";
+import { AnimatedTooltipPreview } from './Tooltip';
 const About = () => {
-  const skills = [
-    'HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS', 'git/github', 'React js', 'Next JS', 'Redux', 'Typescript', 'Responsive Design',
+
+  const data = [
+    'Provide Web Design & Development',
+    'Resposive Design',
+    'Best Website Support & Consultations',
+    'User Experience (UX) Design',
+    'Performance Optimization',
   ]
   return (
-    <div>
-      <h1 className='text-3xl text-center font-semibold font-caveat'>About Me </h1>
-      <hr className='w-20 mx-auto border-black border rounded-2xl'/>
-      <p className='text-center px-44 '>Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology</p>
-      <div className='grid grid-cols-1 sm:grid-cols-2 2xl:px-[15%]'>
-        <div>
-          <h2 className='py-3 font-semibold text-xl px-5'>Get to know me!</h2>
-          <div className='flex flex-col gap-3 px-5'>
-            <p>I am Tanvir Rana. I am a Web Designer with 2 years of hands-on experience in crafting captivating digital experiences.I have best experience in HTML, CSS, and JavaScript, with expertise in frameworks like React.js and Next.js.I have also skilled in leveraging Tailwind CSS for rapid styling, Redux for state management, and ensuring responsive design principles are seamlessly integrated into every project.
-            </p>
-            <p>Experienced in version control with Git and GitHub, ensuring seamless collaboration and efficient project management. Constantly seeking to expand my skill set and stay abreast of emerging technologies to deliver cutting-edge solutions.
-
-            </p>
-            <p>You may not have a good life, but I can easily make your life a good one as a successful businessman.</p>
+    <div className='py-20 bg-[#0A0A0A]'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-5 px-5'>
+        <div className='flex gap-5 place-self-end'>
+          <div className='shadow-md w-66 h-80 relative'>
+            <Image className='w-full h-full rounded-xl object-cover bt-14 ' src={work1} alt="work" />
+          </div>
+          <div className='shadow-md w-66 h-80 relative'>
+            <Image className='w-full h-full rounded-xl object-cover mt-14  ' src={work2} alt="work" />
           </div>
         </div>
-        <div>
-          <h2 className='font-semibold text-xl py-3'>I Know </h2>
-          <ul className='flex flex-wrap gap-2'>
-            {
-              skills.map((skill) => (
-                <li 
-                className=' px-5 py-2 bg-third shadow-sm rounded-md'
-                key={skill}>{skill}</li>
-              ))
-            }
-          </ul>
+        <div className='place-self-center'>
+          <div className='flex flex-col justify-start items-start gap-5'>
+            <h1 className='text-white text-5xl font-secular uppercase '>About</h1>
+            <h2 className='text-gray-300'>
+              We offer the best design and development services!
+            </h2>
+            <p className='text-gray-300'>
+              Our objective is to offer a high-quality service and a dependable source of income to our investors while simultaneously minimizing any potential risks and automating and simplifying the relationships.
+            </p>
+            <ul>
+              {
+                data.map((data: string) => (
+                  <li
+                    className='flex items-center gap-2 '
+                    key={data}>
+                    <span className='text-white z-50'> <IoMdDoneAll /></span>
+                    <p className='text-gray-300'>{data}</p>
+                  </li>
+                ))
+              }
+            </ul>
+            <div >
+              <AnimatedTooltipPreview />
+            </div>
+          </div>
         </div>
+      </div>
+      {/* <Counter/> */}
+      <div className='flex flex-wrap gap-3 justify-evenly mt-20'>
+        <Counter value={100} name='Happy Clients' icon={<FaUser />} />
+        <Counter value={150} name='Project Complete' icon={<GrProjects />} />
+        <Counter value={3} name='Years Of Experience' icon={<FaCalendarDays />} />
       </div>
     </div>
   )
