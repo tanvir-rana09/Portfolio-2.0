@@ -9,6 +9,13 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+
+interface proptype {
+  title: string;
+  link: string;
+  thumbnail: StaticImport;
+}[];
 
 export const HeroParallax = ({
   products,
@@ -16,7 +23,7 @@ export const HeroParallax = ({
   products: {
     title: string;
     link: string;
-    thumbnail: 'StaticImport';
+    thumbnail: StaticImport;
   }[];
 }) => {
   const firstRow = products.slice(0, 4);
@@ -111,9 +118,9 @@ export const Header = () => {
         Here you will find some of the personal and clients projects that I created with each project containing its own case study
       </p>
       <p
-      className="max-w-2xl text-base md:text-xl mt-8 text-neutral-200"
+        className="max-w-2xl text-base md:text-xl mt-8 text-neutral-200"
       >
-      Our objective is to offer a high-quality service and a dependable source of income to our investors while simultaneously minimizing any potential risks and automating and simplifying the relationships.
+        Our objective is to offer a high-quality service and a dependable source of income to our investors while simultaneously minimizing any potential risks and automating and simplifying the relationships.
       </p>
     </div>
   );
@@ -126,7 +133,7 @@ export const ProductCard = ({
   product: {
     title: string;
     link: string;
-    thumbnail: string;
+    thumbnail: StaticImport;
   };
   translate: MotionValue<number>;
 }) => {
