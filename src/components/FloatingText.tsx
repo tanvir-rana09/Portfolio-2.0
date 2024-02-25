@@ -63,7 +63,7 @@ export default function ParallaxText({ children, baseVelocity = 100 }: ParallaxP
    */
   return (
     <div className="parallax">
-      <motion.div className="scroller font-plaster text-gray-300" style={{ x }}>
+      <motion.div className="scroller font-plaster text-gray-300 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl" style={{ x }}>
         <span>{children} </span>
         <span>{children} </span>
         <span>{children} </span>

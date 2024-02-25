@@ -3,8 +3,8 @@ import { Card } from "./Index";
 import { FaLaptopCode } from "react-icons/fa";
 import { VscServerProcess } from "react-icons/vsc";
 import { IoIosApps } from "react-icons/io";
-import { ReactNode } from "react";
-import { animate, motion } from 'framer-motion'
+import { ReactNode, useEffect } from "react";
+import { useAnimate, usePresence } from 'framer-motion'
 type MyObjectType = {
   heading: string;
   bio: string;
@@ -30,21 +30,57 @@ const Services = () => {
     }
   ]
 
+  // const [scope, animate] = useAnimate()
+
+  // useEffect(() => {
+  //   const handleAnimate = async () => {
+
+  //     await animate('#card0', { y: 0, opacity: 1 }, { duration: 0.5 })
+  //     await animate('#card1', { y: 0, opacity: 1 }, { duration: 0.5 })
+  //     await animate('#card2', { y: 0, opacity: 1 }, { duration: 0.5 })
+
+  //   }
+  //   handleAnimate()
+  // }, [animate])
+
+  const [isPresent, safeToRemove] = usePresence();
+  const [scope, animate] = useAnimate();
+
+  useEffect(() => {
+    if (isPresent) {
+      const enterAnimation = async () => {
+        // Animates the elements to enter when isPresent is true
+        await animate(scope.current, { opacity: 1 }, { duration: 1 });
+        await animate("#card0", { opacity: 1, x: 0 }, { duration: 1 });
+        await animate("#card1", { opacity: 1, x: 0 }, { duration: 1 });
+        await animate("#card2", { opacity: 1, x: 0 }, { duration: 1 });
+      };
+      enterAnimation();
+    } else {
+      const exitAnimation = async () => {
+        // Animates the elements to exit when isPresent is false
+        await animate("#card0", { opacity: 0, x: -100 }, { duration: 1 });
+        await animate("#card1", { opacity: 0, x: -100 }, { duration: 1 });
+        await animate("#card2", { opacity: 0, x: -100 }, { duration: 1 });
+        await animate(scope.current, { opacity: 0 }, { duration: 1 });
+        safeToRemove(); // Safely removes the elements after exit animation
+      };
+      exitAnimation();
+    }
+  }, [isPresent,animate,safeToRemove,scope]);
   return (
-    <div className=" 2xl:px-[15%] md:px-10 pt-20">
+    <div className=" 2xl:px-[15%] md:px-10 pt-20 ">
       <h1 className="text-center py-5 text-3xl font-secular uppercase text-gray-300">Services That Help You Grow.</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mb-20">
+      <div
+        ref={scope}
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mb-20 ">
         {
-          cardData.map((card: MyObjectType) => (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5 ,y:100 }}
-              whileInView={
-               { opacity: 1, scale: 1,y:0 }
-              }
-              transition={{ duration: 1 }}
-              className=" place-self-center" key={card.bio} >
+          cardData.map((card: MyObjectType, i) => (
+            <div
+              id={`card${i}`}
+              className=" place-self-center " key={card.bio} >
               <Card icon={card.icon} heading={card.heading} bio={card.bio} />
-            </motion.div>
+            </div>
           ))
 
         }

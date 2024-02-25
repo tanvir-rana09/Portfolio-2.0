@@ -50,7 +50,7 @@ main {
 .parallax .scroller {
 	font-weight: 600;
 	text-transform: uppercase;
-	font-size: 64px;
+	/* font-size: 64px; */
 	display: flex;
 	white-space: nowrap;
 	display: flex;
