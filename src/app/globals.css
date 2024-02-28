@@ -118,3 +118,32 @@ main {
 .toggleBtn path {
 	fill: white;
 }
+#html{
+	position: relative;
+	width: 100%;
+	background-color: #353535;
+	height: 20px;
+
+}
+#html::after{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	transition: all 1s;
+	content: '';
+	background-color: #8f6060;
+	animation-timing-function: linear;
+    animation-fill-mode: forwards;
+	animation-duration: 2;
+    animation-iteration-count: 1;
+	animation-timeline: view();
+	animation-name: html;
+	
+}
+@keyframes html {
+    to{
+        width: 70%;
+    }
+}

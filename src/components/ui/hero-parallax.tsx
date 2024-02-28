@@ -114,31 +114,33 @@ export const HeroParallax = ({
 export const Header = () => {
 
   // const [scope, animate] = useAnimate()
+  // const ref = useRef(null);
+  // const isInView = useInView(ref, { once: true });
+
+  // useEffect(() => {
+  //   const handleAnimate = async () => {
+
+  //     await animate('#projectsHeading', { x: 0, opacity: 1 }, { duration: 0.3 })
+  //     await animate('#projectsbio1', { x: 0, opacity: 1 }, { duration: 0.3 })
+  //     await animate('#projectsbio2', { x: 0, opacity: 1 }, { duration: 0.3 })
+
+  //   }
+  //   handleAnimate()
+  // }, [animate])
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-
-  useEffect(() => {
-    const handleAnimate = async () => {
-
-      await animate('#projectsHeading', { x: 0, opacity: 1 }, { duration: 0.3 })
-      await animate('#projectsbio1', { x: 0, opacity: 1 }, { duration: 0.3 })
-      await animate('#projectsbio2', { x: 0, opacity: 1 }, { duration: 0.3 })
-
-    }
-    handleAnimate()
-  }, [animate])
-
   return (
     <motion.div
       style={{
-        transform: isInView ? "none" : "translateX(-200px)",
+        transform: isInView ? "none" : "translateY(200px)",
         opacity: isInView ? 1 : 0,
         transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
       }}
       ref={ref}
       className="md:px-12 max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-20 z-10">
       <h1 id="projectsHeading" className="text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 font-secular uppercase">
-        My Projects
+        My all Projects
       </h1>
       <p id="projectsbio1" className="max-w-2xl text-base md:text-xl mt-8 text-neutral-200">
         Here you will find some of the personal and clients projects that I created with each project containing its own case study

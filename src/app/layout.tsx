@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Italiana, Sen, Quicksand, Caveat, Cinzel, Montserrat,Secular_One,Plaster } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footter";
 
 const italiana = Italiana({ subsets: ["latin"], weight: '400', variable: '--font-italiana' });
 const montserrat = Montserrat({ subsets: ["latin"], weight: '400', variable: '--font-montserrat' });
@@ -24,7 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${italiana.variable} ${sen.variable} ${cinzel.variable} ${caveat.variable} ${quicksand.variable} ${montserrat.variable} ${secular.variable} ${plaster.variable} font-quicksand`}>
-        {children}
+       <div><Navbar/></div>
+       <div> {children}</div>
+       <div><Footer/></div>
       </body>
     </html>
   );
