@@ -5,6 +5,7 @@ import quran from '@/assets/Quran.png'
 const projects = [
 	{
 		name: 'Quran App',
+		id:'1',
 		bio: `This site basically has 114 Surahs ie 30 Para Quran.
 		This site surahs and verses are nicely arranged so that the user can easily read and find the verses and surahs. Translated into Arabic as well as Bengali for reading.
 		Again, audio has been provided so that the user can listen to the verses, if there is a problem in reading, they can read the audio by listening to it. Ruku, page number and part of how many verses are also given with each verse`,
@@ -28,6 +29,7 @@ const projects = [
 
 	{
 		name: 'Movie Database',
+		id:'2',
 		bio: `Welcome to my simple movie database website! Here, users can access all upcoming movies and TV shows, along with top-rated and most popular ones. The site allows users to search for any movies and TV shows. Additionally, users can personalize their experience by adding their favorite movies and TV shows to their favorites list on the site. Enjoy exploring your movie and TV show preferences! `,
 		image: movie,
 		overview: `
@@ -49,6 +51,7 @@ const projects = [
 
 	{
 		name: 'Watch E-Commerce',
+		id:'3',
 		bio: `
 		Welcome to our watch website! Explore our diverse collection of timepieces and easily find your desired watch using our intuitive search feature. Shop with confidence as you add watches to your cart with our seamless functionality. Whether you're a seasoned collector or new to watches, our user-friendly platform ensures a hassle-free shopping experience. Discover the perfect timepiece for yourself or as a gift, and enjoy the convenience of online watch shopping at its finest.`,
 		image: watch,
@@ -72,3 +75,4 @@ Whether shopping for yourself or searching for the perfect gift, our watch websi
 		]
 	},
 ]
+export default projects
