@@ -3,8 +3,9 @@ import { Card } from "./Index";
 import { FaLaptopCode } from "react-icons/fa";
 import { VscServerProcess } from "react-icons/vsc";
 import { IoIosApps } from "react-icons/io";
-import { ReactNode, useEffect, useRef } from "react";
-import { useAnimate, useInView, usePresence } from 'framer-motion'
+import { ReactNode } from "react";
+import { motion } from 'framer-motion'
+import { anim } from "./Animation";
 type MyObjectType = {
   heading: string;
   bio: string;
@@ -29,30 +30,30 @@ const Services = () => {
       icon: <IoIosApps />
     }
   ]
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
 
   return (
-    <div 
-    style={{
-      transform: isInView ? "none" : "translateY(200px)",
-      opacity: isInView ? 1 : 0,
-      transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-      
-    }}
-    ref={ref}
-    className=" 2xl:px-[15%] md:px-10 pt-20 ">
-      <h1 className="text-center py-5 text-3xl font-secular uppercase text-gray-300">Services That Help You Grow.</h1>
+    <div
+
+      className=" 2xl:px-[15%] md:px-10 pt-20 ">
+      <motion.h1
+      variants={anim('down',0.2)}
+      initial='hidden' 
+      whileInView={"show"}
+      viewport={{once:true,amount:0.5}}
+      className="text-center py-5 text-3xl font-secular uppercase text-gray-300">Services That Help You Grow.</motion.h1>
       <div
 
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mb-20 ">
         {
           cardData.map((card: MyObjectType, i) => (
-            <div
-              id={`card${i}`}
+            <motion.div
+              variants={anim('up', 0.5*i)}
+              initial='hidden'
+              whileInView={"show"}
+              viewport={{ once: true, amount: 0.5 }}
               className=" place-self-center " key={card.bio} >
               <Card icon={card.icon} heading={card.heading} bio={card.bio} />
-            </div>
+            </motion.div>
           ))
 
         }

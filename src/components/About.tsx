@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import React from 'react'
 import work1 from '@/assets/pexels-canva-studio-3194519.jpg'
@@ -8,6 +9,8 @@ import { FaUser } from "react-icons/fa6";
 import { GrProjects } from "react-icons/gr";
 import { FaCalendarDays } from "react-icons/fa6";
 import { AnimatedTooltipPreview } from './Tooltip';
+import { motion } from 'framer-motion'
+import { anim } from './Animation';
 const About = () => {
 
   const data = [
@@ -20,15 +23,25 @@ const About = () => {
   return (
     <div className='py-20 bg-[#0A0A0A]'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-5 px-5'>
-        <div className='flex gap-5 place-self-end'>
+        <motion.div
+          variants={anim('right', 0.2)}
+          initial='hidden'
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.5 }}
+          className='flex gap-5 place-self-end'>
           <div className='shadow-md w-66 h-80 relative'>
             <Image className='w-full h-full rounded-xl object-cover bt-14 ' src={work1} alt="work" />
           </div>
           <div className='shadow-md w-66 h-80 relative'>
             <Image className='w-full h-full rounded-xl object-cover mt-14  ' src={work2} alt="work" />
           </div>
-        </div>
-        <div className='place-self-center'>
+        </motion.div>
+        <motion.div
+          variants={anim('left', 0.2)}
+          initial='hidden'
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.5 }}
+          className='place-self-center'>
           <div className='flex flex-col justify-start items-start gap-5'>
             <h1 className='text-white text-5xl font-secular uppercase '>About</h1>
             <h2 className='text-gray-300'>
@@ -53,14 +66,19 @@ const About = () => {
               <AnimatedTooltipPreview />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       {/* <Counter/> */}
-      <div className='flex flex-wrap gap-3 justify-evenly mt-20'>
+      <motion.div
+        variants={anim('up', 0.2)}
+        initial='hidden'
+        whileInView={"show"}
+        viewport={{ once: true, amount: 0.5 }}
+        className='flex flex-wrap gap-3 justify-evenly mt-20'>
         <Counter value={100} name='Happy Clients' icon={<FaUser />} />
         <Counter value={150} name='Project Complete' icon={<GrProjects />} />
         <Counter value={3} name='Years Of Experience' icon={<FaCalendarDays />} />
-      </div>
+      </motion.div>
     </div>
   )
 }

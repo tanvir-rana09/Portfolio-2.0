@@ -20,7 +20,7 @@ export default function Home() {
             Web Development Web Development
           </ParallaxText>
         </div>
-        <div><Skills /></div>
+        {/* <div><Skills /></div> */}
         <div><Services /></div>
         <div><ClientTestimonials /></div>
         <div><About /> </div>

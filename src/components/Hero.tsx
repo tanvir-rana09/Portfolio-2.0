@@ -1,22 +1,10 @@
 'use client'
-import React, { useEffect, useRef } from "react";
+import { anim } from "./Animation";
 import { Spotlight } from "./ui/Spotlight";
 import { SparklesCore } from "./ui/sparkles";
-import { useAnimate, useInView, usePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Hero() {
-
-  const [scope, animate] = useAnimate()
-
-  useEffect(() => {
-    const handleAnimate = async () => {
-
-      await animate('#heading', { y: -50, opacity: 1 }, { duration: 0.5 })
-      await animate('#bio', { y: -50, opacity: 1 }, { duration: 0.5 })
-
-    }
-    handleAnimate()
-  }, [animate])
 
   return (
     <div className="h-[40rem] w-full flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden cursor-pointer">
@@ -37,13 +25,24 @@ export default function Hero() {
           />
         </div>
         <div
-          ref={scope} className="p-4 max-w-7xl mx-auto relative z-10  w-full mt-44 md:pt-0">
-          <h1 id="heading" className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 font-secular uppercase opacity-0">
+          
+          className="p-4 max-w-7xl mx-auto relative z-10  w-full mt-44 md:pt-0">
+          <motion.h1
+          variants={anim('up',0.2)}
+          initial='hidden' 
+          whileInView={"show"}
+          viewport={{once:true,amount:0.5}}
+          id="heading" className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 font-secular uppercase opacity-0">
             Hi There, I am <br /> Tanvir Rana
-          </h1>
-          <p id="bio" className="mt-4 font-normal text-base text-neutral-300 max-w-xl text-center mx-auto opacity-0">
+          </motion.h1>
+          <motion.p 
+          variants={anim('down',0.8)}
+          initial='hidden' 
+          whileInView={"show"}
+          viewport={{once:true,amount:0.5}}
+          id="bio" className="mt-4 font-normal text-base text-neutral-300 max-w-xl text-center mx-auto opacity-0">
             A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product.I&apos;m passionate about crafting experiences that are engaging, accessible, and user-centric.
-          </p>
+          </motion.p>
         </div>
       </div>
     </div>

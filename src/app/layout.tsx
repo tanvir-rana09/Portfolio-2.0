@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body className={`${italiana.variable} ${sen.variable} ${cinzel.variable} ${caveat.variable} ${quicksand.variable} ${montserrat.variable} ${secular.variable} ${plaster.variable} font-quicksand`}>
        <div><Navbar/></div>
        <div> {children}</div>
