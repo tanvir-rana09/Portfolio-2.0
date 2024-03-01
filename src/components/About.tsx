@@ -21,7 +21,9 @@ const About = () => {
     'Performance Optimization',
   ]
   return (
-    <div className='py-20 bg-[#0A0A0A]'>
+    <div
+    id='about'
+    className='py-20 bg-[#0A0A0A]'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-5 px-5'>
         <motion.div
           variants={anim('right', 0.2)}

@@ -20,7 +20,7 @@ const CaseStudies = ({
 	classs: string,
 }) => {
 	return (
-		<div>
+		<div id='projects'>
 			<div className='grid grid-cols-1 md:grid-cols-2 gap-5 px-7 items-center '>
 				<motion.div
 					variants={anim('right', 0.2)}

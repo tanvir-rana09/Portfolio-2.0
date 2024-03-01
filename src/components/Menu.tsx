@@ -8,15 +8,15 @@ export function Menu() {
 		},
 		{
 		  name: 'Projects',
-		  slug: '/projects',
+		  slug: '#projects',
 		},
 		{
 		  name: 'about',
-		  slug: '/about',
+		  slug: '#about',
 		},
 		{
-		  name: 'Contact',
-		  slug: '/contact',
+		  name: 'Services',
+		  slug: '#services',
 		}
 	  ]
 	return (

@@ -33,21 +33,21 @@ const Services = () => {
 
   return (
     <div
-
+      id="services"
       className=" 2xl:px-[15%] md:px-10 pt-20 ">
       <motion.h1
-      variants={anim('down',0.2)}
-      initial='hidden' 
-      whileInView={"show"}
-      viewport={{once:true,amount:0.5}}
-      className="text-center py-5 text-3xl font-secular uppercase text-gray-300">Services That Help You Grow.</motion.h1>
+        variants={anim('down', 0.2)}
+        initial='hidden'
+        whileInView={"show"}
+        viewport={{ once: true, amount: 0.5 }}
+        className="text-center py-5 text-3xl font-secular uppercase text-gray-300">Services That Help You Grow.</motion.h1>
       <div
 
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mb-20 ">
         {
           cardData.map((card: MyObjectType, i) => (
             <motion.div
-              variants={anim('up', 0.5*i)}
+              variants={anim('up', 0.5 * i)}
               initial='hidden'
               whileInView={"show"}
               viewport={{ once: true, amount: 0.5 }}

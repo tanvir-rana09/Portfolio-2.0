@@ -4,7 +4,8 @@ import { useEffect, useState } from "react"
 import useMenuAnimation from "./MenuAnimation"
 import { Menu } from "./Menu"
 import { MenuToggle } from "./MenuToggle"
-
+import { motion } from 'framer-motion'
+import { anim } from "./Animation"
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const scope = useMenuAnimation(isOpen);
@@ -28,16 +29,17 @@ const Navbar = () => {
     },
     {
       name: 'Projects',
-      slug: '/projects',
+      slug: '#projects',
     },
     {
       name: 'about',
-      slug: '/about',
+      slug: '#about',
     },
+   
     {
-      name: 'Contact',
-      slug: '/contact',
-    }
+      name: 'Services',
+      slug: '#services',
+    },
   ]
   return (
     <div className='relative flex justify-center z-[99]'>
@@ -45,8 +47,11 @@ const Navbar = () => {
         <Menu />
         <MenuToggle toggle={() => setIsOpen(!isOpen)} />
       </div>
-      <div className={`hidden w-[40rem] sm:flex justify-evenly mx-auto fixed top-0 h-16 z-[100] rounded-full duration-1000 ${fixedNav ? 'fixed top-4 transparent bg-primary text-white z-50 shadow-md ' : 'fixed top-4 transparent bg-transparent text-white z-50'}`}>
-        <ul className="flex justify-evenly items-center py-3 font-caveat w-full">
+      <div
+       
+        className={`hidden w-[40rem] sm:flex justify-evenly mx-auto fixed top-0 h-16 z-[100] rounded-full duration-1000 ${fixedNav ? 'fixed top-4 transparent bg-primary text-white z-50 shadow-md ' : 'fixed top-4 transparent bg-transparent text-white z-50'}`}>
+        <ul
+        className="flex justify-evenly items-center py-3 font-caveat w-full">
           {
             navitems.map((nav, i) => (
               <li
