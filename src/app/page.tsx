@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <main className="">
-      <TracingBeam className="h-full">
+
         <div><Hero /></div>
         <div className=''><Projects /></div>
         <div><ProjectsCaseStudies /></div>
@@ -24,7 +24,7 @@ export default function Home() {
         <div><Services /></div>
         <div><ClientTestimonials /></div>
         <div><About /> </div>
-      </TracingBeam>
+
     </main>
   );
 }

@@ -20,6 +20,27 @@
 	}
 }
 
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: transparent;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 20px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #555;
+  }
+
 * {
 	font-style: normal;
 	-webkit-font-smoothing: antialiased;
@@ -27,14 +48,6 @@
 
 main {
 	overflow: hidden;
-	
-}
-
-
-::-webkit-scrollbar {
-	width: 10px;
-	background-color: #000000;
-	display: none;
 }
 
 .parallax {
