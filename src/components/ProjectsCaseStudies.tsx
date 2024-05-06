@@ -51,11 +51,12 @@ const ProjectsCaseStudies = () => {
 				initial='hidden' 
 				whileInView={"show"}
 				viewport={{once:true,amount:0.5}}
+				className='2xl:max-w-[150rem] mx-auto'
 				>
 					<p className='text-center text-gray-300 uppercase tracking-widest'>Latest Works</p>
 					<h2 className='sm:text-3xl md:text-5xl text-2xl text-center text-gray-300 pb-5 font-secular uppercase'>Explore My Popular Projects</h2>
 				</motion.div>
-				<div className='flex flex-col gap-20'>
+				<div className='flex flex-col gap-20 2xl:max-w-[150rem] mx-auto'>
 					{
 						casedata.map((data: caseType) => (
 							<CaseStudies classs={data.classs} className={data.className} id={data.id} key={data.id} name={data.name} image={data.image} describe={data.describe} />

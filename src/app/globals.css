@@ -81,8 +81,8 @@ main {
 	position: fixed;
 	top: 0;
 	left: 0;
+	right: 0;
 	bottom: 0;
-	width: 400px;
 	background:#000000;
 	padding-top: 100px;
 	transform: translateX(-100%);

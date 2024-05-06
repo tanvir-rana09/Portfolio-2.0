@@ -79,7 +79,7 @@ const Navbar = () => {
               <li
                 className="navbar "
                 key={i}>
-                <Link className="z-50 text-3x text-white" href={nav.slug}>{nav.name}</Link>
+                <Link className="z-50 text-white" href={nav.slug}>{nav.name}</Link>
               </li>
             ))
           }

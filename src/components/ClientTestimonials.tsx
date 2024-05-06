@@ -9,7 +9,7 @@ const ClientTestimonials = () => {
 			initial='hidden'
 			whileInView={"show"}
 			viewport={{ once: true, amount: 0.5 }}
-			className="grid grid-cols-1 lg:grid-cols-3 items-center px-5 bg-[#0A0A0A] w-full">
+			className="grid grid-cols-1 lg:grid-cols-3 items-center 2xl:max-w-[80rem] mx-auto px-5 bg-[#0A0A0A] w-full ">
 			<div className="flex flex-col gap-7 col-span-1">
 				<h1 className=" font-semibold uppercase tracking-widest text-cyan-500">Clients Testimonials</h1>
 				<h2 className="text-gray-300 text-5xl font-quicksand font-semibold">I have 100+ Clients <span className="text-cyan-500">Feedback</span></h2>

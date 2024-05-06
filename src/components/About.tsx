@@ -23,7 +23,7 @@ const About = () => {
   return (
     <div
     id='about'
-    className='py-20 bg-[#0A0A0A]'>
+    className='py-20 bg-[#0A0A0A] 2xl:max-w-[150rem] mx-auto'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-5 px-5'>
         <motion.div
           variants={anim('right', 0.2)}
@@ -49,7 +49,7 @@ const About = () => {
             <h2 className='text-gray-300'>
               We offer the best design and development services!
             </h2>
-            <p className='text-gray-300'>
+            <p className='text-gray-300 2xl:max-w-[40rem] '>
               Our objective is to offer a high-quality service and a dependable source of income to our investors while simultaneously minimizing any potential risks and automating and simplifying the relationships.
             </p>
             <ul>

@@ -34,7 +34,7 @@ const Services = () => {
   return (
     <div
       id="services"
-      className=" 2xl:px-[15%] md:px-10 pt-20 ">
+      className=" 2xl:px-[15%] md:px-10 pt-20 2xl:max-w-[150rem] mx-auto">
       <motion.h1
         variants={anim('down', 0.2)}
         initial='hidden'
